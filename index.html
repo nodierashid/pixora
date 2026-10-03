@@ -1,0 +1,148 @@
+;--panel:rgba(20,20,30,.72);--text:#f7f7fb;--muted:#a8a8b7;--line:rgba(255,255,255,.1);--accent:#b86cff;--accent2:#ff4fa3;--good:#72e6bd}*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(circle at 15% 5%,#32104b 0,transparent 34%),radial-gradient(circle at 90% 10%,#4b153a 0,transparent 32%),var(--bg);color:var(--text);min-height:100vh}.wrap{max-width:1120px;margin:auto;padding:22px}.nav{display:flex;justify-content:space-between;align-items:center;padding:10px 0}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px}.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;box-shadow:0 12px 35px rgba(184,108,255,.35)}.logo:before{content:'✦';font-size:22px}.badge{border:1px solid var(--line);background:rgba(255,255,255,.05);padding:8px 12px;border-radius:999px;color:#ddd;font-size:12px}.hero{text-align:center;padding:70px 10px 38px}.eyebrow{color:#d8b9ff;font-size:12px;text-transform:uppercase;letter-spacing:2.5px;font-weight:700}.hero h1{font-size:clamp(42px,8vw,82px);line-height:.98;margin:16px 0;background:linear-gradient(100deg,#fff,#d7b5ff 45%,#ff91c6);-webkit-background-clip:text;color:transparent}.hero p{max-width:680px;margin:20px auto;color:var(--muted);font-size:17px;line-height:1.7}.box{max-width:820px;margin:30px auto 0;padding:9px;border:1px solid var(--line);background:rgba(255,255,255,.06);backdrop-filter:blur(22px);border-radius:22px;display:flex;gap:8px}.box input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:white;padding:17px;font-size:15px}.btn{border:0;border-radius:15px;padding:0 24px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;font-weight:800;cursor:pointer;min-height:52px}.btn:hover{filter:brightness(1.12)}.notice{font-size:12px;color:#898998;margin-top:12px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:44px 0}.card{padding:22px;border:1px solid var(--line);background:var(--panel);border-radius:22px;backdrop-filter:blur(18px);min-height:150px}.icon{font-size:25px;margin-bottom:15px}.card h3{margin:0 0 8px;font-size:16px}.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:55px 0}.step{border-top:1px solid var(--line);padding-top:18px}.num{font-size:12px;color:#d6a9ff}.step h3{margin:8px 0}.step p{color:var(--muted);font-size:14px;line-hei<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pixora — Social Media Downloader</title>
+
+<style>
+:root{--bg:#07070b;--panel:rgba(20,20,30,.72);--text:#f7f7fb;--muted:#a8a8b7;--line:rgba(255,255,255,.1);--accent:#b86cff;--accent2:#ff4fa3;--good:#72e6bd}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(circle at 15% 5%,#32104b 0,transparent 34%),radial-gradient(circle at 90% 10%,#4b153a 0,transparent 32%),var(--bg);color:var(--text);min-height:100vh}
+.wrap{max-width:1120px;margin:auto;padding:22px}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:10px 0}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px}
+.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;box-shadow:0 12px 35px rgba(184,108,255,.35)}
+.logo:before{content:'✦';font-size:22px}
+.badge{border:1px solid var(--line);background:rgba(255,255,255,.05);padding:8px 12px;border-radius:999px;color:#ddd;font-size:12px}
+.hero{text-align:center;padding:70px 10px 38px}
+.eyebrow{color:#d8b9ff;font-size:12px;text-transform:uppercase;letter-spacing:2.5px;font-weight:700}
+.hero h1{font-size:clamp(42px,8vw,82px);line-height:.98;margin:16px 0;background:linear-gradient(100deg,#fff,#d7b5ff 45%,#ff91c6);-webkit-background-clip:text;color:transparent}
+.hero p{max-width:680px;margin:20px auto;color:var(--muted);font-size:17px;line-height:1.7}
+.box{max-width:820px;margin:30px auto 0;padding:9px;border:1px solid var(--line);background:rgba(255,255,255,.06);backdrop-filter:blur(22px);border-radius:22px;display:flex;gap:8px}
+.box input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:white;padding:17px;font-size:15px}
+.btn{border:0;border-radius:15px;padding:0 24px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;font-weight:800;cursor:pointer;min-height:52px}
+.btn:hover{filter:brightness(1.12)}
+.notice{font-size:12px;color:#898998;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:44px 0}
+.card{padding:22px;border:1px solid var(--line);background:var(--panel);border-radius:22px;backdrop-filter:blur(18px);min-height:150px}
+.icon{font-size:25px;margin-bottom:15px}
+.card h3{margin:0 0 8px;font-size:16px}
+.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:55px 0}
+.step{border-top:1px solid var(--line);padding-top:18px}
+.num{font-size:12px;color:#d6a9ff}
+.step h3{margin:8px 0}
+.step p{color:var(--muted);font-size:14px;line-height:1.6}
+.foot{border-top:1px solid var(--line);padding:28px 0 12px;display:flex;justify-content:space-between;color:#888;font-size:12px}
+.toast{position:fixed;left:50%;bottom:25px;transform:translateX(-50%) translateY(20px);opacity:0;pointer-events:none;background:#171722;border:1px solid var(--line);padding:13px 17px;border-radius:14px;transition:.25s}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(max-width:760px){.grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.box{flex-direction:column}.btn{min-height:52px}.hero{padding-top:48px}}
+@media(max-width:430px){.grid{grid-template-columns:1fr}.wrap{padding:16px}.hero h1{font-size:50px}}
+</style>
+</head>
+
+<body>
+<main class="wrap">
+
+<nav class="nav">
+<div class="brand"><div class="logo"></div><span>PIXORA</span></div>
+<div class="badge">Premium Media Toolkit</div>
+</nav>
+
+<section class="hero">
+<div class="eyebrow">Fast • Clean • Private</div>
+
+<h1>Save the moment.</h1>
+
+<p>Pixora is a luxury-style media downloader interface for public social content. Paste a supported public post link to begin.</p>
+
+<div class="box">
+<input id="url" placeholder="Paste a public post, reel or video URL…" aria-label="Media URL">
+<button class="btn" onclick="startDownload()">Download</button>
+</div>
+
+<div class="notice">
+Only download content you have permission to save. Private-account content requires authorized access.
+</div>
+</section>
+
+<section class="grid">
+<article class="card"><div class="icon">◈</div><h3>Reels</h3><p>Save supported public short-form videos in a clean workflow.</p></article>
+<article class="card"><div class="icon">▣</div><h3>Photos</h3><p>Download public image posts without cluttered interfaces.</p></article>
+<article class="card"><div class="icon">▶</div><h3>Videos</h3><p>A simple destination for supported public video links.</p></article>
+<article class="card"><div class="icon">◌</div><h3>Stories</h3><p>Story tools are designed around authorized, privacy-respecting access.</p></article>
+</section>
+
+<section class="steps">
+<div class="step"><div class="num">01 — PASTE</div><h3>Drop your link</h3><p>Copy a supported public media URL and paste it into the Pixora box.</p></div>
+<div class="step"><div class="num">02 — PROCESS</div><h3>Prepare media</h3><p>Pixora validates the link format and prepares an available download action.</p></div>
+<div class="step"><div class="num">03 — SAVE</div><h3>Download</h3><p>Save media you are authorized to download to your device.</p></div>
+</section>
+
+<footer class="foot">
+<span>© 2026 Pixora</span>
+<span>Developer: nodierashid</span>
+</footer>
+
+</main>
+
+<div id="toast" class="toast"></div>
+
+<script>
+const API_URL = "https://pixora-backend7.onrender.com";
+
+async function startDownload(){
+
+  const u = document.getElementById("url").value.trim();
+  const t = document.getElementById("toast");
+
+  if(!u){
+    t.textContent = "Paste a public media URL first.";
+    t.classList.add("show");
+    setTimeout(()=>t.classList.remove("show"),3200);
+    return;
+  }
+
+  if(!/^https?:\/\//i.test(u)){
+    t.textContent = "Please enter a valid URL.";
+    t.classList.add("show");
+    setTimeout(()=>t.classList.remove("show"),3200);
+    return;
+  }
+
+  t.textContent = "Connecting to Pixora...";
+  t.classList.add("show");
+
+  try{
+
+    const response = await fetch(API_URL + "/api/process", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        url: u
+      })
+    });
+
+    const data = await response.json();
+
+    if(data.success){
+      t.textContent = "Link received successfully.";
+    }else{
+      t.textContent = data.message || "Unable to process link.";
+    }
+
+  }catch(error){
+
+    t.textContent = "Backend connection failed.";
+
+  }
+
+  setTimeout(()=>t.classList.remove("show"),3200);
+}
+</script>
+
+</body>
+</html>
