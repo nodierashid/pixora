@@ -129,7 +129,12 @@ async function startDownload(){
     const data = await response.json();
 
     if(data.success){
-      t.textContent = "Link received successfully.";
+      t.textContent = "Download link ready.";
+      t.classList.add("show");
+
+      if(data.downloadUrl){
+        window.open(data.downloadUrl, "_blank");
+      }
     }else{
       t.textContent = data.message || "Unable to process link.";
     }
